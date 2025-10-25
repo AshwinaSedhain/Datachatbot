@@ -5,25 +5,31 @@
 **Last Updated:** October 2024
 
 ---
+# create a .env file
 
-## Table of contents
+Get Groq API Key (FREE)
 
-1. [Overview](#overview)
-2. [What it does](#what-it-does)
-3. [Core features](#core-features)
-4. [Architecture & Components](#architecture--components)
-5. [Technology stack & dependencies](#technology-stack--dependencies)
-6. [Installation](#installation)
-7. [Quick start](#quick-start)
-8. [API / Public interface](#api--public-interface)
-9. [Integration guide (Streamlit / React / Vue)](#integration-guide-streamlit--react--vue)
-10. [Performance & limits](#performance--limits)
-11. [Security & best practices](#security--best-practices)
-12. [Troubleshooting](#troubleshooting)
-13. [Changelog](#changelog)
-14. [License](#license)
+Visit https://console.groq.com in your browser
 
----
+1.Sign up or log in to your account
+
+2.Navigate to the "API Keys" section
+
+3.Click "Create API Key"
+
+4.Give your key a name (e.g., "datachatbot")
+
+5.Click "Create" or "Generate"
+
+6.Copy the generated API key (it starts with "gsk_")
+
+7.Paste the key into your .env file:
+
+GROQ_API_KEY=your_copied_key_here(write this onlt line api key here)
+
+Save the .env file
+
+
 
 ## Overview
 
