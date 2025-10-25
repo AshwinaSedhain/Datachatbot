@@ -123,7 +123,7 @@ class IntentClassifier:
     
     def detect_domain(self, schema: Dict) -> Tuple[str, float, Dict]:
         """
-        🔥 AUTO-DETECT DATABASE DOMAIN
+        AUTO-DETECT DATABASE DOMAIN
         
         Args:
             schema: Database schema dict

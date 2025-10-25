@@ -13,30 +13,30 @@ class ChatbotAgent:
     """
     Universal AI Chatbot Agent
     
-    ✅ Works with ANY database (auto-detects domain)
-    ✅ Adapts responses based on domain
+    Works with ANY database (auto-detects domain)
+    Adapts responses based on domain
     """
     
     def __init__(self):
         print("\n" + "="*70)
-        print("🤖 Initializing Universal AI Chatbot Agent...")
+        print("Initializing Universal AI Chatbot Agent...")
         print("="*70)
         
         print("Loading components...")
         self.intent_classifier = IntentClassifier()
-        print("✅ Intent Classifier ready (with domain detection)")
+        print("ntent Classifier ready (with domain detection)")
         
         self.query_generator = QueryGenerator()
-        print("✅ Query Generator ready")
+        print("Query Generator ready")
         
         self.response_generator = ResponseGenerator()
-        print("✅ Response Generator ready")
+        print("Response Generator ready")
 
         self.visualizer = AutoVisualizer()
-        print("✅ Visualizer ready")
+        print("Visualizer ready")
         
         print("="*70)
-        print("✅ Universal Chatbot Agent initialized!")
+        print(" Universal Chatbot Agent initialized!")
         print("   Supports: Healthcare, Finance, Retail, Education, HR, Logistics, E-commerce, and more!")
         print("="*70 + "\n")
     
@@ -65,8 +65,8 @@ class ChatbotAgent:
         Returns:
             dict: {
                 "success": bool,
-                "domain": str,                  # 🔥 Auto-detected domain
-                "domain_confidence": float,     # 🔥 Detection confidence
+                "domain": str,                  
+                "domain_confidence": float,    
                 "intent": dict,
                 "generated_query": str,
                 "query_results": Any,
@@ -78,13 +78,13 @@ class ChatbotAgent:
         """
         
         try:
-            # 🔥 STEP 0: AUTO-DETECT DATABASE DOMAIN
+            # STEP 0: AUTO-DETECT DATABASE DOMAIN
             detected_domain, domain_confidence, all_domain_scores = \
                 self.intent_classifier.detect_domain(database_schema)
             
-            print(f"\n🎯 Detected Domain: {detected_domain.upper()} (confidence: {domain_confidence:.2%})")
+            print(f"\n Detected Domain: {detected_domain.upper()} (confidence: {domain_confidence:.2%})")
             if domain_confidence < 0.5:
-                print(f"   ⚠️  Low confidence - treating as general database")
+                print(f" Low confidence - treating as general database")
             
             # Step 1: Classify intent and extract entities
             intent_data = self.intent_classifier.classify(user_prompt)
@@ -136,15 +136,15 @@ class ChatbotAgent:
                     query_results,
                     user_prompt,
                     intent_data['intent'],
-                    detected_domain  # 🔥 Pass domain for smart chart selection
+                    detected_domain  #  Pass domain for smart chart selection
                 )
             
             # Return complete result
             return {
                 "success": True,
-                "domain": detected_domain,                    # 🔥 NEW
-                "domain_confidence": domain_confidence,       # 🔥 NEW
-                "all_domain_scores": all_domain_scores,      # 🔥 NEW
+                "domain": detected_domain,                    
+                "domain_confidence": domain_confidence,       
+                "all_domain_scores": all_domain_scores,      
                 "intent": intent_data,
                 "generated_query": generated_query,
                 "query_results": query_results,
